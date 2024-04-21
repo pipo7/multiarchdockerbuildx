@@ -23,13 +23,15 @@ docker buildx create --name mybuilder --platform "linux/amd64,linux/arm64" --dri
 docker buildx inspect --bootstrap
 
 # login to registry , pass user and token securely to CLI
-DOCKER_REGISTRY: artifactory.company.com
-docker login -p="${ARTIFACTORY_TOKEN}" -u="${ARTIFACTORY_USER}" $DOCKER_REGISTRY
+```DOCKER_REGISTRY: artifactory.company.com```
+```docker login -p="${ARTIFACTORY_TOKEN}" -u="${ARTIFACTORY_USER}" $DOCKER_REGISTRY```
 
 # set the following params and use buildx to build multiArch images
+```
 REMOTE_IMAGE_NAME := $(DOCKER_REGISTRY)/$(DOCKER_REPO)/$(IMAGE_NAME)
 DOCKER_REGISTRY :=  docker.registry.com ``` artifactory.company.com```
 DOCKER_REPO := test_multi_arch
 IMAGE_NAME := go-multi-arch
 TAG := v1.0 
 docker buildx build --rm --push --platform linux/amd64,linux/arm64 -t $(REMOTE_IMAGE_NAME):$(TAG) .
+```
