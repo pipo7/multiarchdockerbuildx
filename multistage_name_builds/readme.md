@@ -16,6 +16,11 @@ docker run hello
 hello, world named builds
 
 # Building multiarch
+# Read the documents 
+https://docs.docker.com/build/buildkit/
+https://speedscale.com/blog/how-to-build-multi-arch-docker-images/
+https://www.docker.com/blog/faster-multi-platform-builds-dockerfile-cross-compilation-guide/
+https://medium.com/@artur.klauser/building-multi-architecture-docker-images-with-buildx-27d80f7e2408
 ```
 export DOCKER_BUILDKIT=1
 export DOCKER_CLI_EXPERIMENTAL=enabled
