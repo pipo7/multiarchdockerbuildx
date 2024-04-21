@@ -16,11 +16,13 @@ docker run hello
 hello, world named builds
 
 # Building multiarch
+```
 export DOCKER_BUILDKIT=1
 export DOCKER_CLI_EXPERIMENTAL=enabled
 docker buildx --help ```To see that buildx is enabled```
 docker buildx create --name mybuilder --platform "linux/amd64,linux/arm64" --driver=docker-container --use
 docker buildx inspect --bootstrap
+```
 
 # login to registry , pass user and token securely to CLI
 ```DOCKER_REGISTRY: artifactory.company.com```
