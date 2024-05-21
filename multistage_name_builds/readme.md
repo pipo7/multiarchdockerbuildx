@@ -38,7 +38,8 @@ docker buildx inspect --bootstrap
 REMOTE_IMAGE_NAME := $(DOCKER_REGISTRY)/$(DOCKER_REPO)/$(IMAGE_NAME)
 DOCKER_REGISTRY :=  docker.registry.com ``` artifactory.company.com```
 DOCKER_REPO := test_multi_arch
-IMAGE_NAME := go-multi-arch
+IMAGE_NAME := go-multi-arch5
+y   
 TAG := v1.0 
 docker buildx build --rm --push --platform linux/amd64,linux/arm64 -t $(REMOTE_IMAGE_NAME):$(TAG) .
 ```

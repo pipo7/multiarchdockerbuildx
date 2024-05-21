@@ -1,0 +1,14 @@
+{
+    "defaultAction": "SCMP_ACT_ALLOW",
+    "syscalls": [
+      {
+        "name": "execve",
+        "action": "SCMP_ACT_ERRNO"
+      },
+      {
+        "name": "execveat",
+        "action": "SCMP_ACT_ERRNO"
+      }
+    ]
+  }
+  
